@@ -10,7 +10,10 @@ describe('levels', () => {
                         m: 12,
                         d: {
                             r: 14,
-                            u: 16,
+                            u: {
+                                q: 4,
+                                u: 5,
+                            }
                         }
                     }
                 },
@@ -32,6 +35,6 @@ describe('levels', () => {
 /*Задача 2*/
 describe('compare', () => {
     it('should compare 2 objects', () => {
-        expect(deepEqual(obj2, obj1)).to.equal(4);
+        expect((innerDepth(obj1, obj2))).to.equal(3);
     })
 })
